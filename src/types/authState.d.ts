@@ -2,7 +2,7 @@ type User = {
   avatar: string;
   userName: string;
   email?: string;
-  authority?: string[];
+  userRoles?: string[];
 };
 
 interface ISessionState {

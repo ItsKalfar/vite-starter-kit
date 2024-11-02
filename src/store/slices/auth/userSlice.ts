@@ -4,7 +4,7 @@ const initialState: User = {
   avatar: "",
   userName: "",
   email: "",
-  authority: [],
+  userRoles: [],
 };
 
 const userSlice = createSlice({
@@ -15,7 +15,7 @@ const userSlice = createSlice({
       state.avatar = action.payload?.avatar;
       state.userName = action.payload?.userName;
       state.email = action.payload?.email;
-      state.authority = action.payload?.authority;
+      state.userRoles = action.payload?.userRoles;
     },
   },
 });
