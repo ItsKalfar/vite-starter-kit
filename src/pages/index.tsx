@@ -3,6 +3,7 @@ import MaxWidthWrapper from "@/components/layouts/max-width-wrapper";
 import {
   GridBackground,
   GridSmallBackground,
+  DotBackground,
 } from "@/components/grid-background";
 import { Balancer } from "react-wrap-balancer";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,6 +11,8 @@ import { FeaturesSection } from "@/components/feature-card";
 import { Link } from "react-router-dom";
 import { landingPage } from "@/constants/landingPage.constants";
 import { SectionHeader } from "@/components/section-header";
+import { PricingSection } from "@/components/pricing-section";
+import { Testimonials } from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -41,6 +44,32 @@ export default function Home() {
           <FeaturesSection />
         </MaxWidthWrapper>
       </GridSmallBackground>
+      <GridSmallBackground fadedLook={false}>
+        <MaxWidthWrapper className="text-center flex flex-col items-center justify-center">
+          <SectionHeader
+            heading={landingPage.topFeatures.heading}
+            subheading={landingPage.topFeatures.subheading}
+          />
+        </MaxWidthWrapper>
+      </GridSmallBackground>
+      <DotBackground fadedLook={false}>
+        <MaxWidthWrapper className="text-center flex flex-col items-center justify-center">
+          <SectionHeader
+            heading={landingPage.testimonials.heading}
+            subheading={landingPage.testimonials.subheading}
+          />
+          <Testimonials />
+        </MaxWidthWrapper>
+      </DotBackground>
+      <DotBackground fadedLook={false}>
+        <MaxWidthWrapper className="text-center flex flex-col items-center justify-center">
+          <SectionHeader
+            heading={landingPage.pricing.heading}
+            subheading={landingPage.pricing.subheading}
+          />
+          <PricingSection />
+        </MaxWidthWrapper>
+      </DotBackground>
     </PageLayout>
   );
 }
