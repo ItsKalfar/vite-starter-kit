@@ -13,10 +13,4 @@ export const authRoutes: Route[] = [
     component: lazy(() => import("@/pages/auth/sign-up")),
     allowedRoles: [],
   },
-  {
-    key: "home",
-    path: `/`,
-    component: lazy(() => import("@/pages/home")),
-    allowedRoles: [],
-  },
 ];

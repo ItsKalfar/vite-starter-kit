@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Provider } from "react-redux";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
@@ -13,6 +13,8 @@ import { Loading } from "./components/loading";
 import PublicRoute from "./components/routes/public-routes";
 import ProtectedRoute from "./components/routes/protected-routes";
 import AuthorityGuard from "./components/routes/authority-guard";
+
+const Home = lazy(() => import("@/pages"));
 
 const { authenticatedEntryPath } = appConfig;
 
@@ -40,6 +42,14 @@ const AppRoutes = () => {
         <Route path="*" element={<Navigate replace to="/" />} />
       </Route>
       <Route path="/" element={<PublicRoute />}>
+        <Route
+          index
+          element={
+            <AuthorityGuard>
+              <Home />
+            </AuthorityGuard>
+          }
+        />
         {publicRoutes.map(
           ({ key, path, component: Component, allowedRoles }, index) => (
             <Route

@@ -1,3 +1,5 @@
+import { GridSmallBackground } from "./grid-background";
+
 export const Loading = () => {
-  return <div>loading...</div>;
+  return <GridSmallBackground>Loading...</GridSmallBackground>;
 };

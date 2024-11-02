@@ -20,27 +20,14 @@ import {
 import { Input, PasswordInput } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 
-const formSchema = z
-  .object({
-    email: z.string().email({
-      message: "Invalid email address.",
-    }),
-    password: z.string().min(8, {
-      message: "Password must be at least 8 characters.",
-    }),
-    confirmPassword: z.string().min(8, {
-      message: "Confirm password must be at least 8 characters.",
-    }),
-  })
-  .superRefine(({ password, confirmPassword }, ctx) => {
-    if (password !== confirmPassword) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Passwords must match.",
-        path: ["confirmPassword"],
-      });
-    }
-  });
+const formSchema = z.object({
+  email: z.string().email({
+    message: "Invalid email address.",
+  }),
+  password: z.string().min(8, {
+    message: "Password must be at least 8 characters.",
+  }),
+});
 
 export const SignInForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -48,7 +35,6 @@ export const SignInForm = () => {
     defaultValues: {
       email: "",
       password: "",
-      confirmPassword: "",
     },
   });
 
@@ -90,22 +76,6 @@ export const SignInForm = () => {
                     <FormControl>
                       <PasswordInput
                         placeholder="Please enter a secure password"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="confirmPassword"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Confirm Passoword</FormLabel>
-                    <FormControl>
-                      <PasswordInput
-                        placeholder="Please confirm your password"
                         {...field}
                       />
                     </FormControl>
