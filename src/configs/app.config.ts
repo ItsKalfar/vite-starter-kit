@@ -1,7 +1,7 @@
 const appConfig: AppConfig = {
-  apiPrefix: "",
-  authenticatedEntryPath: "/home",
-  unAuthenticatedEntryPath: "/sign-in",
+  apiPrefix: "/api",
+  authenticatedEntryPath: "/dashboard",
+  unAuthenticatedEntryPath: "/",
   tourPath: "/",
   locale: "en",
 };
