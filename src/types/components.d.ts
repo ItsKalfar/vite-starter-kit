@@ -1,6 +1,7 @@
 type BackgroundGridProps = {
   children: React.ReactNode;
   fadedLook?: boolean;
+  className?: string;
 };
 
 type SectionHeaderProps = {

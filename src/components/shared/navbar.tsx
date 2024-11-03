@@ -13,6 +13,7 @@ import * as React from "react";
 import { Button, buttonVariants } from "../ui/button";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
+import { useAppSelector } from "@/store";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -54,6 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export const Navbar = () => {
   const { theme, setTheme } = useTheme();
+  const { signedIn } = useAppSelector((state) => state.auth.session);
   return (
     <header className="lg:flex items-center justify-between py-6 max-w-screen-xl mx-auto hidden">
       <Link to="/">
@@ -152,11 +154,19 @@ export const Navbar = () => {
             )}
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to="/">
-              <NavigationMenuLink className={buttonVariants()}>
-                Sign Up
-              </NavigationMenuLink>
-            </Link>
+            {signedIn ? (
+              <Link to="/dashboard">
+                <NavigationMenuLink className={buttonVariants()}>
+                  Go to dashboard
+                </NavigationMenuLink>
+              </Link>
+            ) : (
+              <Link to="/">
+                <NavigationMenuLink className={buttonVariants()}>
+                  Sign Up
+                </NavigationMenuLink>
+              </Link>
+            )}
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

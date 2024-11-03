@@ -7,6 +7,11 @@ import {
   IconHelp,
   IconRouteAltLeft,
   IconTerminal2,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
 } from "@tabler/icons-react";
 
 export const landingPage = {
@@ -33,6 +38,13 @@ export const landingPage = {
     subheading: `Don't just take our word for it! Hear from our satisfied users who have successfully built their SaaS applications using our starter kit.`,
   },
 };
+
+export const logos = [
+  { src: "/placeholder.svg?height=40&width=100", alt: "Company 1" },
+  { src: "/placeholder.svg?height=40&width=100", alt: "Company 2" },
+  { src: "/placeholder.svg?height=40&width=100", alt: "Company 3" },
+  { src: "/placeholder.svg?height=40&width=100", alt: "Company 4" },
+];
 
 export const features = [
   {
@@ -85,22 +97,58 @@ export const features = [
   },
 ];
 
-export const plans = [
+export const topFeatures = [
   {
-    name: "Student",
-    price: "$0",
-    description: "Perfect for students",
-    features: ["1 user", "1 projects", "1GB storage"],
+    title: "Built-in Authentication",
+    description:
+      "Secure and easy-to-integrate authentication system for your users.",
+    header: <img />,
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
+    title: "Customizable UI Components",
+    description:
+      "Beautiful, responsive components that fit seamlessly into any design.",
+    header: <img />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Robust API Integration",
+    description:
+      "Seamlessly integrate with third-party APIs to extend functionality.",
+    header: <img />,
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Scalable Architecture",
+    description:
+      "Built to grow with your business and handle high demand effortlessly.",
+    header: <img />,
+    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Comprehensive Analytics",
+    description:
+      "Gain insights into user behavior and application performance with ease.",
+    header: <img />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+  },
+];
+
+export const plans = [
+  {
     name: "Starter",
-    price: "$9",
+    monthlyPrice: "$9",
+    yearlyPricing: "$90",
+    discountMessage: "Save $18",
     description: "Perfect for small projects",
     features: ["1 user", "10 projects", "5GB storage", "Basic support"],
   },
   {
     name: "Pro",
-    price: "$29",
+    monthlyPrice: "$20",
+    yearlyPricing: "$200",
+    discountMessage: "Save $40",
     description: "Ideal for growing teams and businesses",
     features: [
       "5 users",
@@ -114,7 +162,9 @@ export const plans = [
   },
   {
     name: "Enterprise",
-    price: "$99",
+    monthlyPrice: "Custom",
+    yearlyPricing: "Custom",
+    discountMessage: "Save $500",
     description: "For large-scale operations and maximum control",
     features: [
       "Unlimited users",
@@ -124,5 +174,54 @@ export const plans = [
       "Custom integrations",
       "On-premise deployment",
     ],
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Alex Johnson",
+    role: "CEO, TechCorp",
+    content:
+      "This product has revolutionized our workflow. Highly recommended!",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: 2,
+    name: "Sam Lee",
+    role: "Designer, CreativeCo",
+    content: "Intuitive and powerful. It's been a game-changer for our team.",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: 3,
+    name: "Jordan Taylor",
+    role: "Marketer, GrowthInc",
+    content: "The support team is fantastic. They've been incredibly helpful.",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: 4,
+    name: "Casey Brown",
+    role: "Developer, CodeCraft",
+    content:
+      "I've tried many similar products, but this one stands out in terms of performance.",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: 5,
+    name: "Riley Green",
+    role: "Entrepreneur",
+    content:
+      "This tool has significantly improved our productivity. Worth every penny!",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: 6,
+    name: "Avery Davis",
+    role: "Project Manager, BuildRight",
+    content:
+      "User-friendly interface with powerful features. It's the perfect combination.",
+    avatar: "/placeholder.svg?height=40&width=40",
   },
 ];
