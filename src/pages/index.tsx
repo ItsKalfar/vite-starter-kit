@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/grid-background";
 import { Balancer } from "react-wrap-balancer";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { FeaturesSection } from "@/components/feature-card";
+import { TechStackSection } from "@/components/feature-card";
 import { Link } from "react-router-dom";
 import { landingPage } from "@/constants/landingPage.constants";
 import { SectionHeader } from "@/components/section-header";
@@ -17,6 +17,7 @@ import { Testimonials } from "@/components/testimonials";
 import { LogoCloud } from "@/components/logo-cloud";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { TopFeatures } from "@/components/top-features";
+import { FaqSection } from "@/components/faq-section";
 
 export default function Home() {
   return (
@@ -50,16 +51,14 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </GridBackground>
-      <GridSmallBackground fadedLook={false}>
+      <GridSmallBackground fadedLook={false} className="flex-col">
         <MaxWidthWrapper className="text-center flex flex-col items-center justify-center">
           <SectionHeader
-            heading={landingPage.featuresSection.heading}
-            subheading={landingPage.featuresSection.subheading}
+            heading={landingPage.technologies.heading}
+            subheading={landingPage.technologies.subheading}
           />
-          <FeaturesSection />
+          <TechStackSection />
         </MaxWidthWrapper>
-      </GridSmallBackground>
-      <GridSmallBackground fadedLook={false}>
         <MaxWidthWrapper className="text-center flex flex-col items-center justify-center">
           <SectionHeader
             heading={landingPage.topFeatures.heading}
@@ -78,12 +77,27 @@ export default function Home() {
         </MaxWidthWrapper>
       </DotBackground>
       <NoBackground fadedLook={false}>
-        <MaxWidthWrapper className="text-center flex flex-col items-center justify-center">
+        <MaxWidthWrapper
+          className="text-center flex flex-col items-center justify-center"
+          id="#pricing"
+        >
           <SectionHeader
             heading={landingPage.pricing.heading}
             subheading={landingPage.pricing.subheading}
           />
           <PricingSection />
+        </MaxWidthWrapper>
+      </NoBackground>
+      <NoBackground fadedLook={false}>
+        <MaxWidthWrapper
+          className="text-center flex flex-col items-center justify-center"
+          id="#pricing"
+        >
+          <SectionHeader
+            heading={landingPage.faqSection.heading}
+            subheading={landingPage.faqSection.subheading}
+          />
+          <FaqSection />
         </MaxWidthWrapper>
       </NoBackground>
       <DotBackground fadedLook={false}>
