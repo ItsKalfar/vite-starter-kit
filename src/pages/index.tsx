@@ -14,7 +14,7 @@ import { landingPage } from "@/constants/landingPage.constants";
 import { SectionHeader } from "@/components/section-header";
 import { PricingSection } from "@/components/pricing-section";
 import { Testimonials } from "@/components/testimonials";
-import { LogoCloud } from "@/components/logo-cloud";
+// import { LogoCloud } from "@/components/logo-cloud";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { TopFeatures } from "@/components/top-features";
 import { FaqSection } from "@/components/faq-section";
@@ -43,12 +43,12 @@ export default function Home() {
               Get Started
             </Link>
           </div>
-          <div className="mt-16">
+          {/* <div className="mt-16">
             <h2 className="text-xl my-4 font-medium">
               Trusted by the best companies
             </h2>
             <LogoCloud />
-          </div>
+          </div> */}
         </MaxWidthWrapper>
       </GridBackground>
       <GridSmallBackground fadedLook={false} className="flex-col">
