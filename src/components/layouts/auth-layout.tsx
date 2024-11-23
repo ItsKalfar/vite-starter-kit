@@ -13,7 +13,7 @@ export default function AuthLayout({
             <p className="mb-12 font-bold bg-clip-text text-3xl md:text-4xl lg:text-6xl text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               Welcome to Stellar!
             </p>
-            <p className="max-w-[80%] mb-4 text-center bg-clip-text text-2xl text-transparent drop-shadow-2xl text-gray-300">
+            <p className="mb-12 text-center max-w-[70%] bg-clip-text text-xl text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
               Already a member? Let's pick up where you left off. New here? Sign
               up in seconds and unlock all the features waiting for you!
             </p>

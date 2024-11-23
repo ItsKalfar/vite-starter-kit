@@ -168,7 +168,7 @@ export const Navbar = () => {
                 </NavigationMenuLink>
               </Link>
             ) : (
-              <Link to="/">
+              <Link to="/sign-up">
                 <NavigationMenuLink className={buttonVariants()}>
                   Try Now
                 </NavigationMenuLink>

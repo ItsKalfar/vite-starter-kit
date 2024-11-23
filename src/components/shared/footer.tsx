@@ -1,4 +1,4 @@
-import { Twitter, Instagram, Linkedin } from "lucide-react";
+import { IconBrandX, IconBrandLinkedin } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import { navigationMenu } from "@/configs/navigation.config/navigation.config";
 
@@ -24,16 +24,20 @@ export const Footer = () => {
             ))}
           </nav>
           <div className="flex space-x-4">
-            <Link to="#" className="text-muted-foreground hover:text-primary">
-              <Twitter className="h-5 w-5" />
+            <Link
+              to="https://x.com/HeyitsSagar20"
+              target="_blank"
+              className="text-muted-foreground hover:text-primary"
+            >
+              <IconBrandX className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Link>
-            <Link to="#" className="text-muted-foreground hover:text-primary">
-              <Instagram className="h-5 w-5" />
-              <span className="sr-only">Instagram</span>
-            </Link>
-            <Link to="#" className="text-muted-foreground hover:text-primary">
-              <Linkedin className="h-5 w-5" />
+            <Link
+              to="https://www.linkedin.com/in/sagar-gund-037b72255/"
+              target="_blank"
+              className="text-muted-foreground hover:text-primary"
+            >
+              <IconBrandLinkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
           </div>

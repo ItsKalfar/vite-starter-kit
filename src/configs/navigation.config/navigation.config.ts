@@ -1,18 +1,22 @@
 export const navigationMenu = [
   {
-    title: "Features",
-    to: "#",
+    title: "Home",
+    to: "/",
   },
   {
-    title: "Customers",
-    to: "#",
+    title: "Features",
+    to: "/",
+  },
+  {
+    title: "About",
+    to: "/",
   },
   {
     title: "Pricing",
-    to: "#",
+    to: "/",
   },
   {
     title: "Contact",
-    to: "#",
+    to: "/",
   },
 ];
